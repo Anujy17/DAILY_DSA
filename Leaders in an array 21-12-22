@@ -1,0 +1,15 @@
+LINK ----------------------- https://practice.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1
+
+
+
+def leaders(self, A, N):
+        result=[]
+        right_most=A[N-1]
+        result.append(right_most)
+        for i in range(N-2,-1,-1):
+            if A[i]>=result[len(result)-1]:
+                result.append(A[i])
+                right_most=A[i]
+        return result[::-1]
+            
+            
