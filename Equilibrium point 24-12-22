@@ -1,0 +1,20 @@
+link --------------- https://practice.geeksforgeeks.org/problems/equilibrium-point-1587115620/1
+
+
+
+ def equilibriumPoint(self,A, N):
+        if len(A)==1:
+            return 1
+        else:
+            total=0
+            Array_sum=sum(A[:])
+            for i in range(N-1):
+                total += A[i]
+                chk = Array_sum-total-A[i+1]
+                if total == chk:
+                    return i+2
+            else :
+                return -1
+                
+                
+                
